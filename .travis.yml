@@ -5,7 +5,7 @@ addons:
     update: false
   postgresql: "9.6"
 
-dist: xenial
+sudo: required
 
 cache:
 - pip
@@ -52,11 +52,6 @@ after_success:
 - codecov
 - python-codacy-coverage -r coverage.xml
 
-notifications:
-  matrix:
-  - email: false
-  slack:
-    secure: CX3x9d562S90xbISGDBGmdrCeu6Bvv/kezMGDa6U2nOAgu6esDVXFwT4GRIPze4tW8zbH7yuDeRPKTIU+p/GpOu4woS+u/c/n9OYVKwRjfqZE2LhHGmu8QkpXzpeZBSZeRWVFmYkIzsgRNcHkVbyMVJoByKGfAVD3x0ENvm3Sr3Ij2WyvRky6ZrgmTXuhil+Fqph9uamq3C1+G8DyTL9OFnz4hZZSktO29SmL9F3G/hvTMlZ9ezan2LngVPaYllfxWhMxuWkjkt7sdnc1iwlq0yxLxoQmokQao+FGMFlUNRT0ASIG0NhBKU/GJl0XR1l2n4zfy4SiBZaU1aDnQvIiFJABW6GUqdbYi4Fzi/nZS7mZTbMZcBTlHFoG7Ebu6StLINTp5bLk+90sa/RAWG4CXwoDZLSpD6hPeun482Zud3wHKyOAB3rwFP2qR2qwGM+ZMh3+49Ca7ngdloNs3DFhY9ISKLqGgUUD2zcS97U8H8qSAbAqlvzqU1oWhv7AIh2sjU7159XfH3yaXyV9mqtyBCtn9/NrYWt9OtSmb1EsMsP/1OjWGgzDGqaeVsjEINnbm/0ERSHFzRfyKqc+fejQpkVvWj0bA/Z1RB9FBfgZQSzkkLHfxwm/tVF6PVg36NxwD/HGIlRzJFlThB8XcK+j4t2J8kwbkskYyZoM6hOGOQ=
 
 env:
   global:
@@ -68,7 +63,7 @@ env:
   - EMAIL_DEFAULT_SENDER='local@local.host'
   - TRAVIS='True'
   - ARTIFACT_NAME='Feedcrunch-Application.zip'
-  - BLUEMIX_USERNAME='jonathan.dekhtiar@utc.fr'
+  - BLUEMIX_USERNAME='xxx.dekhtiar@utc.fr'
   - BLUEMIX_API_GATEWAY='https://api.eu-gb.bluemix.net'
   - BLUEMIX_API_ORGANISATION='FeedCrunch'
   - BLUEMIX_API_SPACE='prod'
